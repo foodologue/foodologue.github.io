@@ -11,15 +11,21 @@ function loadPage(page) {
         })
         .then(data => {
             document.getElementById("main-content").innerHTML = data; // Insert content into the main content area
+            sessionStorage.setItem('currentPage', page); // Save the current page to sessionStorage
         })
         .catch(error => {
-            document.getElementById("main-content").innerHTML = `<h2>Error</h2><p>${error.message}</p>`; // Fixed: Use backticks for template literals
+            document.getElementById("main-content").innerHTML = `<h2>Error</h2><p>${error.message}</p>`; // Use backticks for template literals
         });
 }
 
-// Automatically load the home page when the site first loads
+// Automatically load the last visited page or the home page if it's the first visit
 window.addEventListener("DOMContentLoaded", function() {
-    loadPage('pages/home.html'); // Load home.html by default when the page loads
+    const lastPage = sessionStorage.getItem('currentPage');
+    if (lastPage) {
+        loadPage(lastPage); // Load the last visited page from sessionStorage
+    } else {
+        loadPage('pages/home.html'); // Load home.html by default if no page is stored
+    }
 });
 
 // Add event listeners to all links in the left column
@@ -30,3 +36,4 @@ document.querySelectorAll(".left-column a").forEach(link => {
         loadPage(page); // Load the corresponding HTML page
     });
 });
+
