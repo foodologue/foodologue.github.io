@@ -4,11 +4,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    min-width: 200px;    
+    max-width: 1200px; /* Set max-width for larger screens */
+    margin: 0 left; 
     padding: 0;
     background: linear-gradient(to left, #F8FAFC, #FCFBF8);
     color: #000000; /* Text color */
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Include padding in width/height */
 }
 
 .container {
@@ -17,9 +20,9 @@ body {
 }
 
 .left-column {
-    width: 200px;
+    max-width: 15%;
     background-color: transparent;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,5 +52,44 @@ body {
     flex-grow: 1;
     padding: 20px;
     background: linear-gradient(to left, #F8FAFC, #FCFBF8);
+    display: 90%    ; /* Use flexbox for main content */
+    flex-direction: column; /* Allow vertical stacking */
 }
+
+.main-content img {
+    width: 100%; /* Responsive image width */
+    max-height: 350px; /* Maintain aspect ratio */
+    min-height: 200px; /* Minimum height for the image */
+    object-fit: cover;
+}
+
+nav {
+    background-color: #333; /* Example background color */
+    color: white;           /* Text color */
+    padding: 15px;         /* Padding around the nav */
+    text-align: center;     /* Center text in the nav */
+    position: relative;      /* Default positioning */
+    min-width: 100px;
+    width: 100px;
+}
+
+/* Adjustments for phones and smaller screens */
+@media (max-width: 600px) {
+    body {
+        max-width: 100%; /* Use full width on smaller screens */
+        padding: 10px; /* Reduce padding */
+        
+    }
+    
+
+    .left-column {
+        max-width: 30%; /* Increase width for better usability */
+    }
+
+    nav {
+        margin-top: 20px; /* Space above nav */
+        padding: 10px; /* Reduce padding on small screens */
+    }
+}
+
 
