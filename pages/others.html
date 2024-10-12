@@ -1,4 +1,6 @@
 
+
+
 <!-- pages/others.html -->
 
 <!DOCTYPE html>
@@ -8,36 +10,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
     <title>Bonn</title>
-    <!--
-    <style>
-        /* Inline styles to customize image size */
-        .header-image {
-            width: 600px;  /* Full width */
-            height: 450px; /* Adjust this height as needed */
-            min-width: 200px;
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-        }
-    </style>
-    -->
+    
 </head>
 <body>
-    <header>
+    <header class="header-box">
+        <h1>Foodologue: A Personal Restaurant Catalogue for Bonn and Cologne</h1> 
         <img src="../images/stephen.jpg" alt="St. Stephen's Basilica, Budapest" class="header-image">
     </header>
-    
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>                
+            <li><a href="bonn.html" data-page="pages/bonn.html">Bonn</a></li>
+            <li><a href="cologne.html" data-page="pages/cologne.html">Cologne</a></li>
+            <li><a href="others.html" data-page="pages/others.html">Other Cities</a></li>
+        </ul>
+    </nav>
     
 <!-- <h1>A Personal Food Guide to Bonn and Cologne</h1> -->
-<h1>A Personal Restaurant Catalogue for Bonn and Cologne</h1> 
+<main class="main-content">
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>                
+            <li><a href="bonn.html" >Bonn</a></li>
+            <li><a href="cologne.html">Cologne</a></li>
+            <li><a href="others.html">Other Cities</a></li>
+        </ul>
+    </nav>
 
     <h2>Other Cities:</h2>
 
     <h4>Berlin</h4>
 
     <ol>
-        <li> <a href= "https://www.instagram.com/takenorirestaurant/?hl=en"> Takenori</a>: Japanese restaurant on Simon-Dach-Straße. I relished their Katsu Curry and would often
+        <li> <a href="https://www.instagram.com/takenorirestaurant/?hl=en">Takenori</a>: Japanese restaurant on Simon-Dach-Straße. I relished their Katsu Curry and would often
             spend my first paycheck as an intern there! 
-            </li>
-            
+        </li>
     </ol>
     
     <h4>Budapest</h4>
@@ -46,15 +53,19 @@
         <li><a href="https://pest.vakvarju.com/etlap/">VakVarjú Restaurant:</a>
         Located on the West of Danube in Pest, I really liked the 
         Madártej (Bird's Milk), a dessert made with egg whites! Very close to the St. Stephen's Basilica.
-        I highly reccommend trying out the Túrógombóc (cottage cheese with sour creme), but I cannot recall the restaurant I had them.
-        The food was authentic according to a couple of locals. 
+        I highly recommend trying out the Túrógombóc (cottage cheese with sour cream), but I cannot recall the restaurant I had them.
+        The food was authentic according to a couple of locals.
+        </li> <!-- Properly closing this <li> here -->
+        
         <li> <a href="https://espressoembassy.hu/">Espresso Embassy:</a> I enjoyed
         the coffee there as well as the general ambience. Thought I might mention this for future reference!</li>
-    </li>
-        
-        
-        
     </ol>
+    <hr>
+    <footer>
+       <p>Navigation: <a href="index.html">Back to Home.</a></p> 
+      
+    </footer>
+</main>
 
     
 </body>
