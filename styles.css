@@ -6,10 +6,12 @@ body {
     max-width: 1024px; /* Set max-width for larger screens */
     margin: 0 auto; /* Centers the content horizontally */
     padding: 0;
-    background: linear-gradient(to left, #F8FAFC, #FCFBF8);
-    color: #000000; /* Text color */
+    background: #343434;/*linear-gradient(to left, #F8FAFC, #FCFBF8);*/
+    
+    color: whitesmoke; /* Text color */
     min-height: 100vh; /* Allows the body to grow with content */
     box-sizing: border-box; /* Include padding in width/height */
+
 }
 
 
@@ -50,7 +52,7 @@ body {
 } /*defines space between nav buttons */
 
 .sidebar ul li a {
-    color: #000000; /* Text color for links */
+    color: whitesmoke; /* Text color for links */
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -78,18 +80,27 @@ header {
 .main-content {
     flex-grow: 1;
     padding: 20px;
-    background: linear-gradient(to left, #F8FAFC, #FCFBF8);
+    background: #343434;/*linear-gradient(to left, #F8FAFC, #FCFBF8);*/
     display: 80%    ; /* Use flexbox for main content */
     flex-direction: column; /* Allow vertical stacking */
     margin-left: 20%;
 }
 
-
+a:link {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:visited {
+  color: greenyellow;
+  background-color: transparent;
+  text-decoration: none;
+}
 
 
 
 nav {
-    background-color: #333; 
+    background-color: none;/*#333;*/ 
     color: white;           
     padding: 15px;         /* Padding around the nav */
     text-align: left;      
@@ -100,7 +111,7 @@ nav {
 
 
 .mobile-nav {
-    background-color: #333; 
+    background-color: none; 
     color: white;           
     padding: 15px;         /* Padding around the nav */
     text-align: left;      
@@ -145,7 +156,7 @@ nav {
 } /*defines space between nav buttons */
 
 .mobile-nav ul li a {
-    color: #000000; /* Text color for links */
+    color: whitesmoke; /* Text color for links */
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -198,6 +209,7 @@ nav {
     }
     .mobile-nav{
         display: block;
+        color: whitesmoke;
     }
 
     
