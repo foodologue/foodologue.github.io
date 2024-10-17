@@ -2,22 +2,26 @@
 
 body {
     font-family: Arial, sans-serif;
+    font-size: large;
     min-width: 200px;    
     max-width: 1024px; /* Set max-width for larger screens */
     margin: 0 auto; /* Centers the content horizontally */
     padding: 0;
-    background: #343434;/*linear-gradient(to left, #F8FAFC, #FCFBF8);*/
+    background: whitesmoke;/*#343434 linear-gradient(to left, #F8FAFC, #FCFBF8);*/
     
     color: whitesmoke; /* Text color */
     min-height: 100vh; /* Allows the body to grow with content */
-    box-sizing: border-box; /* Include padding in width/height */
-
+    /*box-sizing: border-box;  Include padding in width/height */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .container {
     display: flex;
     height: 100%;
+    flex-grow: 1;
 }
 
 .header-image {
@@ -25,18 +29,25 @@ body {
     width: 100%; 
     height: 300px; 
     object-fit: cover;
+    
+   
+    
 
 }
+
+
 
 .sidebar {
     /*max-width: 10%;*/
     background-color: transparent;
     padding: 10px;
     width: 150px;
+    background: hsla(0, 0%, 15%, 0.89);
 
     position: fixed;
-    top: 20px;
+    
     bottom: 0;
+    height: 100%; 
    
 }
 
@@ -56,7 +67,7 @@ body {
     text-decoration: none;
     display: block;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1); /* Light background for links */
+    background-color: none;/*rgba(0, 0, 0, 0.1);  Light background for links */
     border-radius: 20px;
     
     /*width: 100%; /*controls width of shading around nav buttons relative to nav wisth*/
@@ -70,8 +81,12 @@ body {
 
 
 header {
-    margin-left: 20%; /* Add margin to the left to accommodate the sidebar */
-    padding: 10px; /* Padding around the header */
+    margin-left: 170px; /* Add margin to the left to accommodate the sidebar */
+   /*padding: 0px;  Padding around the header */
+    color: whitesmoke;
+    background-color: #343434;
+    top: 20px;
+    padding-left: 10px;
 }
 
 
@@ -79,20 +94,20 @@ header {
 
 .main-content {
     flex-grow: 1;
-    padding: 20px;
+    padding: 10px;
     background: #343434;/*linear-gradient(to left, #F8FAFC, #FCFBF8);*/
-    display: 80%    ; /* Use flexbox for main content */
+    display: flex;    ; /* 100% Use flexbox for main content */
     flex-direction: column; /* Allow vertical stacking */
-    margin-left: 20%;
+    margin-left: 170px; /*not 17 % anymore*/
 }
 
 a:link {
-    color: pink;
+    color: rgb(236, 124, 142);
     background-color: transparent;
     text-decoration: none;
   }
 a:visited {
-  color: greenyellow;
+  color: pink;
   background-color: transparent;
   text-decoration: none;
 }
@@ -146,7 +161,7 @@ nav {
 }
 
 .mobile-nav li:last-child {
-    margin-right: 0; /* Remove margin for the last item */
+    margin-right: 10px; /* margin for the last item */
 }
 
 
@@ -160,7 +175,7 @@ nav {
     text-decoration: none;
     display: block;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1); /* Light background for links */
+    background-color: none;/* rgba(0, 0, 0, 0.1); Light background for links */
     border-radius: 20px;
     
     /*width: 100%; /*controls width of shading around nav buttons relative to nav wisth*/
